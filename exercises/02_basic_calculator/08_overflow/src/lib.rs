@@ -25,6 +25,9 @@ mod tests {
         assert_eq!(factorial(20), 2_192_834_560);
         //                           ☝️
         // A large number literal using underscores to improve readability!
+
+        // The max number for a 32-bit unsigned integer is 4,294,967,296.
+        // 20! is 2432902008176640000.
     }
 
     #[test]
