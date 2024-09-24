@@ -1,12 +1,14 @@
 mod ticket {
-    struct Ticket {
-        title: String,
-        description: String,
-        status: String,
+    pub struct Ticket {
+        // I'm surprised that I need to individual make every single property public since I made `Ticket` public.
+        // Is there an easier way to do this?
+        pub title: String,
+        pub description: String,
+        pub status: String,
     }
 
     impl Ticket {
-        fn new(title: String, description: String, status: String) -> Ticket {
+        pub fn new(title: String, description: String, status: String) -> Ticket {
             if title.is_empty() {
                 panic!("Title cannot be empty");
             }
